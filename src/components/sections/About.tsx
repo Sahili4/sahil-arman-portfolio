@@ -35,7 +35,7 @@ export function About() {
     <section id="about" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="01 // BACKGROUND & PHILOSOPHY"
+          badge="About & Philosophy"
           title="Engineering Solutions."
           highlight="Creating Impact."
           subtitle="My approach combines rigorous technical engineering with practical business understanding to build software that scales predictably."

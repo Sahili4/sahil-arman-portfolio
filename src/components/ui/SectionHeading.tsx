@@ -29,8 +29,8 @@ export function SectionHeading({
       )}
     >
       {badge && (
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wider uppercase bg-violet-500/10 text-violet-400 border border-violet-500/20 mb-4 backdrop-blur-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide uppercase bg-violet-500/10 text-violet-300 border border-violet-500/25 mb-4 backdrop-blur-sm">
+          <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
           {badge}
         </div>
       )}

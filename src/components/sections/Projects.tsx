@@ -26,7 +26,7 @@ export function Projects() {
     <section id="projects" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="03 // CASE STUDIES"
+          badge="Featured Case Studies"
           title="Architectural Work."
           highlight="Proven Systems."
           subtitle="A selection of high-concurrency SaaS applications, enterprise dashboards, and mobile platforms engineered with scalable foundations."

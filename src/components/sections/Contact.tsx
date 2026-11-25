@@ -32,7 +32,7 @@ export function Contact() {
     <section id="contact" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="06 // GET IN TOUCH"
+          badge="Get In Touch"
           title="Have an Idea?"
           highlight="Let's Build It Together."
           subtitle="Whether you're building a new product, improving an existing platform or looking for a reliable development partner, I'd love to hear about your project."

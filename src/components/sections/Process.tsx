@@ -8,7 +8,7 @@ export function Process() {
     <section id="process" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="05 // METHODOLOGY"
+          badge="Work Methodology"
           title="From Concept to"
           highlight="Production Reality."
           subtitle="A structured, transparent engineering process focused on clear communication, risk mitigation, and high-velocity delivery."

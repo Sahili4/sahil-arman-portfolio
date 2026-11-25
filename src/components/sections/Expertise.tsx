@@ -30,7 +30,7 @@ export function Expertise() {
     <section id="expertise" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="02 // TECHNICAL STACK"
+          badge="Core Tech Stack"
           title="Battle-Tested"
           highlight="Expertise."
           subtitle="Specialized technology stacks built for high-concurrency web applications, transaction-safe backends, and responsive mobile platforms."
