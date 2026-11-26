@@ -30,7 +30,7 @@ export const services: Service[] = [
     id: "backend-api-development",
     title: "Backend & API Development",
     shortDescription:
-      "Secure backend systems, REST APIs, database architecture, and resilient third-party integrations built for zero downtime.",
+      "Secure backend systems, REST APIs, database architecture, and resilient third-party integrations built for high reliability and scale.",
     detailedDescription:
       "I design robust backend engines in Laravel (PHP) and Node.js / TypeScript that handle heavy transactional loads safely. Whether you need a fresh RESTful API, database optimization, or third-party integrations, I deliver secure, auditable, and easily maintainable services.",
     capabilities: [

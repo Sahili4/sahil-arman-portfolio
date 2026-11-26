@@ -40,6 +40,16 @@ export function Navbar() {
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMobileMenu();
+    };
+    if (mobileMenuOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
+
   return (
     <header
       className={cn(
@@ -119,7 +129,7 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[61px] bg-[#09090B]/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 shadow-2xl transition-all">
+        <div className="md:hidden fixed inset-x-0 top-full bg-[#09090B]/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 shadow-2xl transition-all">
           <div className="flex flex-col space-y-3">
             {navItems.map((item) => {
               const sectionId = item.href.replace("#", "");

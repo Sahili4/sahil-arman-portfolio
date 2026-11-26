@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     // If Resend API key is configured
     if (resendApiKey) {
       try {
-        await fetch("https://api.resend.com/emails", {
+        const resendRes = await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -64,10 +64,16 @@ export async function POST(request: Request) {
           body: JSON.stringify({
             from: "Portfolio Contact <onboarding@resend.dev>",
             to: [recipientEmail],
+            reply_to: email,
             subject: `New Portfolio Inquiry from ${fullName} (${projectType || "General"})`,
             text: `Name: ${fullName}\nEmail: ${email}\nCompany: ${company || "N/A"}\nProject Type: ${projectType}\nBudget: ${budget}\n\nDetails:\n${projectDetails}`,
           }),
         });
+
+        if (!resendRes.ok) {
+          const resendError = await resendRes.json();
+          console.error("Resend API delivery error:", resendError);
+        }
       } catch (err) {
         console.error("Resend API error:", err);
       }

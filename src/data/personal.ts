@@ -30,19 +30,19 @@ export const personalInfo: PersonalInfo = {
       description: "Delivering full-stack web, mobile, and API systems",
     },
     {
-      label: "Production Deployments",
-      value: "20+",
-      description: "Robust architectures built for scalability and zero-downtime",
+      label: "Production Systems",
+      value: "5+",
+      description: "Enterprise SaaS marketplaces, mobile apps & backend gateways",
     },
     {
-      label: "International Reach",
+      label: "Global Coverage",
       value: "4+",
       description: "Targeted coverage across USA, UK, Canada & Australia",
     },
     {
-      label: "API Reliability",
-      value: "99.9%",
-      description: "High-performance REST APIs & transaction-safe webhooks",
+      label: "Architecture Standard",
+      value: "Type-Safe",
+      description: "Relational data integrity, modular services & strict TypeScript",
     },
   ],
 };

@@ -123,13 +123,16 @@ export function ContactForm() {
                 id="fullName"
                 type="text"
                 placeholder="e.g. Alex Morgan"
+                aria-required="true"
+                aria-invalid={!!errors.fullName}
+                aria-describedby={errors.fullName ? "fullName-error" : undefined}
                 className={`w-full px-4 py-2.5 rounded-lg bg-[#111114] border ${
                   errors.fullName ? "border-red-500 focus:border-red-500" : "border-white/10 focus:border-violet-500"
                 } text-[#F4F4F5] text-sm placeholder-[#71717A] focus:outline-none focus:ring-1 focus:ring-violet-500 transition-colors`}
                 {...register("fullName", { required: "Full name is required" })}
               />
               {errors.fullName && (
-                <p className="mt-1 text-xs text-red-400">{errors.fullName.message}</p>
+                <p id="fullName-error" role="alert" className="mt-1 text-xs text-red-400">{errors.fullName.message}</p>
               )}
             </div>
 
@@ -141,6 +144,9 @@ export function ContactForm() {
                 id="email"
                 type="email"
                 placeholder="alex@company.com"
+                aria-required="true"
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
                 className={`w-full px-4 py-2.5 rounded-lg bg-[#111114] border ${
                   errors.email ? "border-red-500 focus:border-red-500" : "border-white/10 focus:border-violet-500"
                 } text-[#F4F4F5] text-sm placeholder-[#71717A] focus:outline-none focus:ring-1 focus:ring-violet-500 transition-colors`}
@@ -153,7 +159,7 @@ export function ContactForm() {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-xs text-red-400">{errors.email.message}</p>
+                <p id="email-error" role="alert" className="mt-1 text-xs text-red-400">{errors.email.message}</p>
               )}
             </div>
           </div>
@@ -218,6 +224,9 @@ export function ContactForm() {
               id="projectDetails"
               rows={4}
               placeholder="Tell me about what you are building, key technical requirements, timelines, or challenges you're facing..."
+              aria-required="true"
+              aria-invalid={!!errors.projectDetails}
+              aria-describedby={errors.projectDetails ? "projectDetails-error" : undefined}
               className={`w-full px-4 py-3 rounded-lg bg-[#111114] border ${
                 errors.projectDetails ? "border-red-500 focus:border-red-500" : "border-white/10 focus:border-violet-500"
               } text-[#F4F4F5] text-sm placeholder-[#71717A] focus:outline-none focus:ring-1 focus:ring-violet-500 transition-colors resize-y min-h-[110px]`}
@@ -230,7 +239,7 @@ export function ContactForm() {
               })}
             />
             {errors.projectDetails && (
-              <p className="mt-1 text-xs text-red-400">{errors.projectDetails.message}</p>
+              <p id="projectDetails-error" role="alert" className="mt-1 text-xs text-red-400">{errors.projectDetails.message}</p>
             )}
           </div>
 

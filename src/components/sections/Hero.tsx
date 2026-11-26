@@ -183,7 +183,7 @@ export function Hero() {
                   </div>
                   <div className="pl-4">],</div>
                   <div className="pl-4">
-                    uptimeMindset: <span className="text-violet-400">true</span>,
+                    productionGrade: <span className="text-violet-400">true</span>,
                   </div>
                   <div className="pl-4">
                     internationalContractReady: <span className="text-emerald-400">true</span>,
@@ -197,8 +197,8 @@ export function Hero() {
                       <span className="text-violet-300 font-semibold">Modular Clean</span>
                     </div>
                     <div className="p-2.5 rounded-lg bg-[#151519] border border-white/5 flex items-center justify-between">
-                      <span className="text-[#71717A]">Target Uptime:</span>
-                      <span className="text-emerald-400 font-semibold">99.9%</span>
+                      <span className="text-[#71717A]">Type Safety:</span>
+                      <span className="text-emerald-400 font-semibold">Strict TS</span>
                     </div>
                   </div>
                 </div>

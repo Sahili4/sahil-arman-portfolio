@@ -64,6 +64,14 @@ export function Button({
 
   if (href) {
     const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+    const handleAnchorClick = props.onClick
+      ? (e: React.MouseEvent<HTMLAnchorElement>) => {
+          (props.onClick as React.MouseEventHandler<HTMLButtonElement>)(
+            e as unknown as React.MouseEvent<HTMLButtonElement>
+          );
+        }
+      : undefined;
+
     if (isExternal) {
       return (
         <a
@@ -71,13 +79,22 @@ export function Button({
           target="_blank"
           rel="noopener noreferrer"
           className={combinedClasses}
+          onClick={handleAnchorClick}
+          aria-label={props["aria-label"]}
+          title={props.title}
         >
           {content}
         </a>
       );
     }
     return (
-      <Link href={href} className={combinedClasses}>
+      <Link
+        href={href}
+        className={combinedClasses}
+        onClick={handleAnchorClick}
+        aria-label={props["aria-label"]}
+        title={props.title}
+      >
         {content}
       </Link>
     );
