@@ -2,7 +2,8 @@
 
 import React from "react";
 import { Project } from "@/types";
-import { ArrowUpRight, Check, Sparkles } from "lucide-react";
+import { ArrowUpRight, Check, Sparkles, ExternalLink } from "lucide-react";
+import { GithubIcon } from "./SocialIcons";
 import { Button } from "./Button";
 
 interface ProjectCardProps {
@@ -11,6 +12,9 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onOpenCaseStudy }: ProjectCardProps) {
+  const hasLiveUrl = project.liveUrl && project.liveUrl !== "#";
+  const hasGithubUrl = project.githubUrl && project.githubUrl !== "#";
+
   return (
     <div className="group relative flex flex-col justify-between rounded-2xl bg-[#151519] border border-white/10 hover:border-violet-500/40 p-6 sm:p-7 transition-all duration-300 hover:shadow-xl hover:shadow-violet-600/10 hover:-translate-y-1">
       {/* Top Header */}
@@ -74,19 +78,45 @@ export function ProjectCard({ project, onOpenCaseStudy }: ProjectCardProps) {
           )}
         </div>
 
-        {/* Action Button */}
-        <div className="flex items-center justify-between gap-3 pt-2">
+        {/* Action Button & Quick Links */}
+        <div className="flex items-center gap-2 pt-2">
           <Button
             variant="secondary"
             size="sm"
-            className="w-full justify-between group/btn hover:border-violet-500/50"
+            className="flex-1 justify-between group/btn hover:border-violet-500/50"
             onClick={() => onOpenCaseStudy(project)}
             rightIcon={
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 text-violet-400" />
             }
           >
-            <span>View Architecture Case Study</span>
+            <span>Architecture Case Study</span>
           </Button>
+
+          {hasLiveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-lg bg-[#1C1C22] border border-white/10 text-[#A1A1AA] hover:text-white hover:border-violet-500/40 hover:bg-violet-600/10 transition-colors"
+              title="Open Live Website / Application"
+              aria-label="Open Live Application"
+            >
+              <ExternalLink className="w-4 h-4 text-violet-400" />
+            </a>
+          )}
+
+          {hasGithubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-lg bg-[#1C1C22] border border-white/10 text-[#A1A1AA] hover:text-white hover:border-violet-500/40 hover:bg-violet-600/10 transition-colors"
+              title="View GitHub Repository"
+              aria-label="View GitHub Repository"
+            >
+              <GithubIcon className="w-4 h-4 text-violet-400" />
+            </a>
+          )}
         </div>
       </div>
     </div>

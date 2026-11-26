@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     // Check configurable webhook / provider
     const contactWebhookUrl = process.env.CONTACT_WEBHOOK_URL;
     const resendApiKey = process.env.RESEND_API_KEY;
-    const recipientEmail = process.env.CONTACT_NOTIFICATION_EMAIL || "contact.sahilarman@example.com";
+    const recipientEmail = process.env.CONTACT_NOTIFICATION_EMAIL || "sahildeshwali123@gmail.com";
 
     // If an external webhook is configured (e.g. Zapier, Slack, Make, or custom API)
     if (contactWebhookUrl) {

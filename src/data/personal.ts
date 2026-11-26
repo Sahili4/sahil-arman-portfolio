@@ -18,12 +18,10 @@ export const personalInfo: PersonalInfo = {
   ],
   philosophy:
     "Engineering excellence isn't just about writing code—it's about designing resilient architectures, eliminating failure modes, and creating software that moves your business forward predictably.",
-  // PLACEHOLDER CONFIGURATION: Update with your real contact details or configure via environment variables
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact.sahilarman@example.com",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "sahildeshwali123@gmail.com",
   socials: {
-    github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/sahilarman-placeholder",
-    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://linkedin.com/in/sahilarman-placeholder",
-    twitter: process.env.NEXT_PUBLIC_TWITTER_URL || "https://twitter.com/sahilarman-placeholder",
+    github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/Sahili4",
+    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/sahil-arman/",
   },
   metrics: [
     {
@@ -37,7 +35,7 @@ export const personalInfo: PersonalInfo = {
       description: "Robust architectures built for scalability and zero-downtime",
     },
     {
-      label: "International Clients",
+      label: "International Reach",
       value: "4+",
       description: "Targeted coverage across USA, UK, Canada & Australia",
     },
